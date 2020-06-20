@@ -1,0 +1,112 @@
+{
+  "name": "@bdevo1896/react",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bdevo1896/react"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "author": {
+    "name": "Bryce DeVaughn",
+    "email": "bryce.devaughn@gmail.com"
+  },
+  "version": "1.1.0",
+  "description": "My own custom component library that is built with React, Typescript and Styled-JSX",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "react-scripts start",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "clear": "rm -rf dist esm",
+    "clear-windows": "rmdir /q /s dist esm",
+    "lint": "eslint \"{components,lib}/**/*.{js,ts,tsx}\"",
+    "prettier": "prettier --write .",
+    "test": "jest --config .jest.config.js --no-cache",
+    "test-update": "jest --config .jest.config.js --no-cache --update-snapshot",
+    "coverage": "yarn test --coverage",
+    "build:esm": "babel --config-file ./scripts/babel.config.js --extensions \".js,.ts,.tsx\" ./src/components --out-dir ./esm --ignore \"**/__tests__/**/*,**/*.d.ts\"",
+    "build:webpack": "webpack --config scripts/webpack.config.js",
+    "build:types": "tsc -p ./scripts",
+    "build": "yarn clear && yarn build:esm && yarn build:webpack && yarn build:types",
+    "build-windows": "yarn clear-windows && yarn build:esm && yarn build:webpack && yarn build:types",
+    "release": "yarn build && yarn publish --access public --non-interactive"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "license": "ISC",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "files": [
+    "/dist",
+    "/esm"
+  ],
+  "peerDependencies": {
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "styled-jsx": "^3.3.0",
+    "styled-jsx-plugin-sass": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-typescript": "^7.10.1",
+    "@babel/runtime": "^7.10.2",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-create-react-app": "^3.1.1",
+    "@storybook/react": "^5.3.19",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/enzyme": "^3.10.5",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/styled-jsx": "^2.2.8",
+    "babel-jest": "^26.0.1",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-react": "^7.20.0",
+    "fs-extra": "^9.0.1",
+    "husky": "^4.2.5",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "styled-jsx": "^3.3.0",
+    "styled-jsx-plugin-sass": "^1.0.0",
+    "typescript": "~3.7.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

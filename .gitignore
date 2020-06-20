@@ -77,6 +77,12 @@ typings/
 
 # Next.js build output
 .next
+out
+./public/sw.js
+./public/sw.js.map
+./public/workbox*.js
+static/
+.env.local
 
 # Nuxt.js build / generate output
 .nuxt
@@ -102,3 +108,10 @@ dist
 
 # TernJS port file
 .tern-port
+
+storybook-static/
+
+css/
+
+dist/
+esm/
