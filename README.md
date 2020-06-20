@@ -12,3 +12,11 @@ yarn add --registry=https://npm.pkg.github.com/ @bdevo1896/react
 ```
 
 This way it is easy for to know where to pull it from and I'm not trying to have this seen too much by the public yet until I make it much more useful and extendable!
+
+## What do I want this library to do?
+1. Have some cool and unique components for SVG manipulation, custom user interactions on site, and more!
+2. A Light and Dark theme that is totally customizable by you
+3. Use Styled-JSX with SASS integration
+4. Have the choice of changing fonts very easily
+5. Be easily extendable with CSS classnames and ids
+6. Completely accessible for the web (this is a big one for me because I haven't created a completely accessible site in a while)
