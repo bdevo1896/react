@@ -58,8 +58,10 @@
   "peerDependencies": {
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
+    "react-svg": "^11.0.27",
     "styled-jsx": "^3.3.0",
-    "styled-jsx-plugin-sass": "^1.0.0"
+    "styled-jsx-plugin-sass": "^1.0.0",
+    "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
@@ -98,8 +100,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "react-svg": "^11.0.27",
     "styled-jsx": "^3.3.0",
     "styled-jsx-plugin-sass": "^1.0.0",
+    "tailwindcss": "^1.4.6",
     "typescript": "~3.7.2",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
