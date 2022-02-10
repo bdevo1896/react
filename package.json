@@ -56,7 +56,7 @@
     "/esm"
   ],
   "peerDependencies": {
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-svg": "^11.0.27",
     "styled-jsx": "^3.3.0",
@@ -94,7 +94,7 @@
     "eslint-plugin-react": "^7.20.0",
     "fs-extra": "^9.0.1",
     "husky": "^4.2.5",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
     "react": "^16.13.1",
